@@ -23,11 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="terminal-line output">• <span class="accent">projects</span>       - List all featured projects & interactive links</div>
 <div class="terminal-line output">• <span class="accent">open &lt;name&gt;</span>     - Open modal details (e.g. <span class="success">open himsagar</span>, <span class="success">open kyro</span>)</div>
 <div class="terminal-line output">• <span class="accent">experience</span>     - View work history & software internships</div>
-<div class="terminal-line output">• <span class="accent">track &lt;mode&gt;</span>    - Set avatar mode: <span class="success">smart</span>, <span class="success">scrub</span>, <span class="success">orbit</span></div>
 <div class="terminal-line output">• <span class="accent">contact</span>        - Get direct email, LinkedIn & GitHub links</div>
 <div class="terminal-line output">• <span class="accent">date</span>           - Display current date and time</div>
 <div class="terminal-line output">• <span class="accent">clear</span>          - Clear the terminal console</div>
-<div class="terminal-line output">• <span class="accent">easteregg</span>      - Discover a hidden surprise!</div>
     `,
 
     about: () => `
@@ -51,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     whoami: () => `
 <div class="terminal-line success">guest@portfolio (Guest User with Interactive Permissions)</div>
-<div class="terminal-line output">Feel free to inspect projects, run commands, or switch avatar tracking modes!</div>
+<div class="terminal-line output">Feel free to inspect projects, run commands, or explore the portfolio!</div>
     `,
 
     skills: () => `
@@ -228,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (e.key === 'Tab') {
       e.preventDefault();
       const current = terminalInput.value.trim().toLowerCase();
-      const list = Object.keys(commands).concat(['track smart', 'track orbit', 'track scrub', 'open himsagar', 'open kyro']);
+      const list = Object.keys(commands).concat(['open himsagar', 'open kyro', 'open aerokeep', 'open sevalog']);
       const match = list.find(c => c.startsWith(current));
       if (match) {
         terminalInput.value = match;
