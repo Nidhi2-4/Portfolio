@@ -31,10 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
     `,
 
     about: () => `
-<div class="terminal-line success">Nidhi Dharme • Creative Technologist & Full-Stack Engineer</div>
-<div class="terminal-line output">Bridging the intersection of fluid web design, creative coding, real-time computer vision, and modern AI engineering.</div>
-<div class="terminal-line output">Passionate about 60fps animations, accessible design systems, resilient distributed backends, and high-impact digital products.</div>
-<div class="terminal-line output">Head Editor & Illustrator at ARCEON Magazine Committee.</div>
+<div class="terminal-line success">🚀 Nidhi Dharme — Full-Stack Engineer & Technical Writer</div>
+<div class="terminal-line output" style="margin-top:6px;">
+  Hi! I build production web apps and write the high-impact content that gets people to them.
+</div>
+<div class="terminal-line output" style="margin-top:8px;">
+  ⚡ <span class="accent">Current Engineering:</span> Shipping production auth, background job queues, and management platforms at <strong>BeRam Drones</strong>.
+</div>
+<div class="terminal-line output">
+  ⚡ <span class="accent">Editorial & SEO:</span> Authored 100+ SEO articles at <strong>Cop&Drop</strong> driving +10% audience growth; Head Editor & Illustrator at <strong>ARCEON</strong>.
+</div>
+<div class="terminal-line output">
+  ⚡ <span class="accent">National Recognitions:</span> <strong>3rd Prize Winner</strong> at MEDHA Medithon 2026 (700+ teams across India) with <em>SureStep</em> (pediatric CV health app).
+</div>
+<div class="terminal-line output" style="margin-top:8px;">
+  💡 <span class="success">Philosophy:</span> <em>"I build things that work, and make them look good doing it. Always striving to become a better person than yesterday."</em>
+</div>
     `,
 
     whoami: () => `
