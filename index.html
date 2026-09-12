@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nidhi Dharme Portfolio</title>
+  <meta name="description"
+    content="Personal portfolio of Nidhi — Creative Technologist & Full-Stack Engineer featuring a 60FPS interactive cursor-tracking 3D character.">
+  <meta property="og:title" content="Nidhi — Creative Technologist & Full-Stack Engineer">
+  <meta property="og:description"
+    content="Explore fluid digital experiences, interactive avatar eye-tracking, and intelligent systems.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Devicon Icons -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/design-system.css?v=28">
+  <link rel="stylesheet" href="styles/hero-avatar.css?v=28">
+  <link rel="stylesheet" href="styles/components.css?v=28">
+  <link rel="stylesheet" href="styles/animations.css?v=28">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       TOP HEADER BAR (Matches Reference)
+       ========================================================================== -->
+  <header class="top-navbar" id="navbar">
+    <div class="top-nav-inner">
+      <!-- Left: Live Local Time + Social Links -->
+      <div class="header-left-group">
+        <div class="brand-logo" id="liveClock">
+          1:01 AM
+        </div>
+        <div class="nav-social-links">
+          <a href="https://www.linkedin.com/in/nidhi-dharme-b65085344/" target="_blank" rel="noopener noreferrer"
+            class="nav-social-icon" aria-label="LinkedIn" title="LinkedIn">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+          </a>
+          <a href="https://github.com/Nidhi2-4" target="_blank" rel="noopener noreferrer" class="nav-social-icon"
+            aria-label="GitHub" title="GitHub">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+          <a href="assets/resume.pdf" download="Nidhi_Dharme_Resume.pdf" class="nav-social-icon"
+            aria-label="Download Resume" title="Download Resume">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Nav Links -->
+      <nav>
+        <ul class="top-nav-menu">
+          <li><a href="#hero" class="top-nav-item">HOME</a></li>
+          <li class="top-nav-sep">/</li>
+          <li><a href="#projects" class="top-nav-item">PROJECTS</a></li>
+          <li class="top-nav-sep">/</li>
+          <li><a href="#experience" class="top-nav-item">WORK EXPERIENCE</a></li>
+          <li class="top-nav-sep">/</li>
+          <li><a href="#achievements" class="top-nav-item">ACHIEVEMENTS</a></li>
+          <li class="top-nav-sep">/</li>
+          <li><a href="#skills" class="top-nav-item">TECHNICAL PROFICIENCIES</a></li>
+          <li class="top-nav-sep">/</li>
+          <li><a href="#contact" class="top-nav-item">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: Full-Bleed 3D Character with Reference Layout
+         ========================================================================== -->
+    <section class="hero-editorial-section" id="hero">
+
+      <!-- Interactive 3D Character Canvas Stage -->
+      <div class="character-stage">
+        <!-- Loading Screen -->
+        <div class="character-loader" id="avatarLoadingOverlay">
+          <div class="loader-spinner"></div>
+          <div class="loader-text" id="avatarProgressText">LOADING CHARACTER • 0%</div>
+        </div>
+
+        <!-- 60FPS Canvas -->
+        <canvas id="avatarCanvas" class="character-canvas"></canvas>
+      </div>
+
+      <!-- Upper Hero Row: Right-aligned Greeting (2 Lines) -->
+      <div class="hero-upper-grid">
+        <h2 class="hero-giant-greeting">
+          <span class="hero-greeting-line">HI,</span>
+          <span class="hero-greeting-line">I'M NIDHI</span>
+        </h2>
+      </div>
+
+      <!-- Bottom Hero Content Grid -->
+      <div class="hero-bottom-grid">
+
+        <!-- Bottom Left: Giant Headline -->
+        <div class="hero-left-content">
+          <h1 class="hero-giant-title">
+            <span class="hero-title-line">I BUILD THINGS THAT WORK,</span>
+            <span class="hero-title-line">AND MAKE THEM</span>
+            <span class="hero-title-line">LOOK GOOD DOING IT.</span>
+          </h1>
+        </div>
+
+        <!-- Bottom Right: Editorial Text & Buttons -->
+        <div class="hero-right-content">
+          <p class="hero-editorial-desc">
+            Ever wonder who builds the app and writes the words that get you there? That's me. I'm currently shipping
+            features at BeRam Drones. I'm also writing content for Cop&Drop. And always chasing a slightly better
+            version of yesterday's me.
+          </p>
+
+          <div class="hero-buttons-row">
+            <a href="#projects" class="pill-btn pill-btn-white">
+              EXPLORE WORK ↗
+            </a>
+            <a href="#contact" class="pill-btn pill-btn-outline">
+              GET IN TOUCH
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED PROJECTS SHOWCASE
+         ========================================================================== -->
+    <section class="section-padding" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+
+        </div>
+
+        <div class="skills-filter-row">
+          <button class="skills-filter-btn project-filter-btn active" data-filter="all">All Projects</button>
+          <button class="skills-filter-btn project-filter-btn" data-filter="fullstack">Full-Stack Systems</button>
+          <button class="skills-filter-btn project-filter-btn" data-filter="ai">AI & Computer Vision</button>
+          <button class="skills-filter-btn project-filter-btn" data-filter="algorithms">Algorithms & DSA</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORK EXPERIENCE (2 Entries)
+         ========================================================================== -->
+    <section class="section-padding" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">
+            Hands-on software development and technical industry internships.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line-bar"></div>
+
+          <!-- Experience 1: BeRam Drones -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">JUNE 2026 — PRESENT</div>
+              <h3 class="timeline-role">Full Stack Developer Assistant Intern</h3>
+              <div class="timeline-company">BeRam Drones — Nagpur, India (On-site)</div>
+              <p class="timeline-desc">
+                Built end-to-end authentication and account infrastructure, including email delivery and background job
+                handling, for two production SaaS products used daily by real users. Designed and shipped the complete
+                frontend and backend for a management platform, turning UX research into a responsive, production-ready
+                interface.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experience 2: Cop&Drop -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">DEC 2025 — PRESENT</div>
+              <h3 class="timeline-role">Content Writer Intern</h3>
+              <div class="timeline-company">Cop&Drop — Bangalore (Remote)</div>
+              <p class="timeline-desc">
+                Researched and wrote 100+ SEO-optimized articles across fashion, music, lifestyle, and culture. Handled
+                keyword research, on-page SEO, and competitor analysis, plus LinkedIn and Instagram content,
+                contributing to a 10% increase in audience reach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LEADERSHIP & CREATIVE WORK (New Section)
+         ========================================================================== -->
+    <section class="section-padding" id="leadership">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Beyond the Code</h2>
+          <p class="section-subtitle">
+            Editorial direction, illustration, and visual design across collegiate chapters and creative initiatives.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line-bar"></div>
+
+          <!-- Entry 1: Head Editor, ARCEON -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">SEPT 2026 — PRESENT</div>
+              <h3 class="timeline-role">Head Editor</h3>
+              <div class="timeline-company">ARCEON, Annual College Magazine Committee</div>
+            </div>
+          </div>
+
+          <!-- Entry 2: Artist, ARCEON -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">MARCH 2025 — PRESENT</div>
+              <h3 class="timeline-role">Artist</h3>
+              <div class="timeline-company">ARCEON, Annual College Magazine Committee</div>
+              <p class="timeline-desc">
+                Design pages and illustrations for the college's annual magazine, and interview alumni for its alumni
+                section, writing and shaping their stories for publication.
+              </p>
+            </div>
+          </div>
+
+          <!-- Entry 3: Graphic Designer, Multi-Clubs -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">AUG 2025 — AUG 2026</div>
+              <h3 class="timeline-role">Graphic Designer</h3>
+              <div class="timeline-company">Students' Sports Club, ACM RBU Student Chapter, Technical Club RCOEM</div>
+              <p class="timeline-desc">
+                Created posters, flyers, and social content across multiple college organizations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Entry 4: Graphic Designer, TheGoodGameTheory -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">SEPT 2025 — JAN 2026</div>
+              <h3 class="timeline-role">Graphic Designer</h3>
+              <div class="timeline-company">TheGoodGameTheory</div>
+            </div>
+          </div>
+
+          <!-- Entry 5: Graphic Designer, InAmigos Foundation -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">JUNE 2025 — JULY 2025</div>
+              <h3 class="timeline-role">Graphic Designer</h3>
+              <div class="timeline-company">InAmigos Foundation (IAF)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ACHIEVEMENTS & HONORS
+         ========================================================================== -->
+    <section class="section-padding" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Achievements</h2>
+          <p class="section-subtitle">
+            National hackathons, clinical innovation awards, and competitive recognitions.
+          </p>
+        </div>
+
+        <div class="achievement-showcase-card glass-card">
+          <!-- Left: High-Res Image -->
+          <div class="achievement-media-col">
+            <div class="achievement-img-wrapper">
+              <img src="assets/medha-medithon.png" alt="Team TechSquad winning 3rd Prize at MEDHA Medithon 2026"
+                class="achievement-img" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Right: Clean Story & Details -->
+          <div class="achievement-content-col">
+            <h3 class="achievement-title">3rd Prize at MEDHA Medithon 2026</h3>
+            <div class="achievement-organizers">
+              National Healthcare Hackathon • August 2026<br>
+              Organized by Leelatai Kulkarni Memorial Hospital in association with BETiC-IIT Bombay, VNIT Nagpur, V3F,
+              and InUnity.
+            </div>
+
+            <div class="achievement-story">
+              <p>
+                Out of <strong>700+ registrations across India</strong>, our team <strong>TechSquad</strong> secured the
+                <strong>3rd Prize</strong> after an intense 15-day healthcare makeathon sprint, presenting directly
+                before practicing surgeons and biomedical mentors.
+              </p>
+              <p>
+                To address the subjectivity and lack of specialists for Clubfoot (CTEV) assessment at primary health
+                centers, we built <strong>SureStep</strong>, an offline-first mobile app using on-device computer vision
+                to standardise photo capture, automatically evaluate the 6 Pirani components across 3 views, and predict
+                future treatment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS & TECH STACK
+         ========================================================================== -->
+    <section class="section-padding" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Technical Proficiencies</h2>
+
+        </div>
+
+        <div class="skills-filter-row">
+          <button class="skills-filter-btn active" data-skill-cat="all">ALL TECH</button>
+          <button class="skills-filter-btn" data-skill-cat="languages">LANGUAGES</button>
+          <button class="skills-filter-btn" data-skill-cat="frontend">FRONTEND & UI</button>
+          <button class="skills-filter-btn" data-skill-cat="backend">BACKEND & DATA</button>
+          <button class="skills-filter-btn" data-skill-cat="creative">AI & CREATIVE/CV</button>
+          <button class="skills-filter-btn" data-skill-cat="tools">TOOLS & DEPLOY</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+
+          <!-- ═══════════════ LANGUAGES (4) ═══════════════ -->
+
+          <div class="skill-card" data-category="languages">
+            <div class="skill-icon-wrap">
+              <i class="devicon-javascript-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">JavaScript</div>
+              <div class="skill-category-label">ES6+, async patterns, DOM manipulation</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="languages">
+            <div class="skill-icon-wrap">
+              <i class="devicon-typescript-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">TypeScript</div>
+              <div class="skill-category-label">Type-safe application development</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="languages">
+            <div class="skill-icon-wrap">
+              <i class="devicon-python-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Python</div>
+              <div class="skill-category-label">Scripting, backend logic, and automation</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="languages">
+            <div class="skill-icon-wrap">
+              <i class="devicon-java-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Java</div>
+              <div class="skill-category-label">OOP fundamentals and DSA practice</div>
+            </div>
+          </div>
+
+          <!-- ═══════════════ FRONTEND & UI (8) ═══════════════ -->
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-react-original colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">React</div>
+              <div class="skill-category-label">Component-driven, hook-based UI architecture</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-vitejs-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Vite</div>
+              <div class="skill-category-label">Fast dev server and build tooling</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-tailwindcss-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Tailwind CSS</div>
+              <div class="skill-category-label">Utility-first responsive styling</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-framermotion-original"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Framer Motion</div>
+              <div class="skill-category-label">Declarative animations and page transitions</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">🐻</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Zustand</div>
+              <div class="skill-category-label">Lightweight global state management</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">TQ</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">TanStack Query</div>
+              <div class="skill-category-label">Server state caching and data fetching</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">RF</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">React Flow</div>
+              <div class="skill-category-label">Interactive node-based diagrams and org charts</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-html5-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">HTML5/CSS3</div>
+              <div class="skill-category-label">Semantic markup and modern layout</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-nextjs-plain"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Next.js 16</div>
+              <div class="skill-category-label">App Router, SSR, and production builds</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">LF</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Leaflet.js & GIS</div>
+              <div class="skill-category-label">Interactive geospatial mapping & radar telemetry</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">RC</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Recharts</div>
+              <div class="skill-category-label">Composable data visualization & dynamic charting</div>
+            </div>
+          </div>
+
+          <!-- ═══════════════ BACKEND & DATA (9) ═══════════════ -->
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-nodejs-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Node.js</div>
+              <div class="skill-category-label">Server-side JavaScript runtime</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-express-original"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Express.js</div>
+              <div class="skill-category-label">REST API framework and middleware</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-fastapi-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">FastAPI</div>
+              <div class="skill-category-label">Async REST APIs with automatic validation</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-postgresql-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">PostgreSQL</div>
+              <div class="skill-category-label">Relational database design</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-prisma-original"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Prisma</div>
+              <div class="skill-category-label">Type-safe ORM and schema modeling</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-redis-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Redis</div>
+              <div class="skill-category-label">Caching and job queue broker</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrap">
+              <i class="devicon-socketio-original"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Socket.IO</div>
+              <div class="skill-category-label">Real-time bidirectional communication</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">Z</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Zod</div>
+              <div class="skill-category-label">Runtime schema validation</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">SSE</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Server-Sent Events</div>
+              <div class="skill-category-label">Real-time low-latency room event streaming</div>
+            </div>
+          </div>
+
+          <!-- ═══════════════ AI & CREATIVE/CV (6) ═══════════════ -->
+
+          <div class="skill-card" data-category="creative">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">AG</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Agora RTC / Conversational AI</div>
+              <div class="skill-category-label">Voice AI pipelines & WebRTC audio streaming</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="creative">
+            <div class="skill-icon-wrap">
+              <span style="font-size: 1.5rem; line-height: 1;">🎙️</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Deepgram & MiniMax</div>
+              <div class="skill-category-label">Real-time neural ASR and voice synthesis</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="creative">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">TD</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">TouchDesigner/GLSL</div>
+              <div class="skill-category-label">Real-time shaders and generative visuals</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="creative">
+            <div class="skill-icon-wrap">
+              <span style="font-size: 1.5rem; line-height: 1;">🖐️</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">MediaPipe</div>
+              <div class="skill-category-label">Hand tracking and computer vision</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="creative">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">MI</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Mistral AI</div>
+              <div class="skill-category-label">LLM integration for content generation</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="creative">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">VS</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Vector Search</div>
+              <div class="skill-category-label">Embeddings and semantic similarity search</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="creative">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">RAG</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">pgvector & RAG</div>
+              <div class="skill-category-label">Vector embeddings & verifiable source citation</div>
+            </div>
+          </div>
+
+          <!-- ═══════════════ TOOLS & DEPLOY (9) ═══════════════ -->
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap">
+              <i class="devicon-docker-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Docker</div>
+              <div class="skill-category-label">Containerization and multi-service orchestration</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap">
+              <i class="devicon-git-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Git & GitHub</div>
+              <div class="skill-category-label">Version control and collaboration</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap">
+              <i class="devicon-vercel-original"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Vercel</div>
+              <div class="skill-category-label">Frontend deployment and hosting</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">R</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Render</div>
+              <div class="skill-category-label">Backend deployment and hosting</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap">
+              <i class="devicon-googlecloud-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Google Cloud</div>
+              <div class="skill-category-label">Cloud infrastructure and services</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap">
+              <i class="devicon-supabase-plain colored"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Supabase</div>
+              <div class="skill-category-label">Auth, real-time data, and storage</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">U</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Upstash</div>
+              <div class="skill-category-label">Serverless Redis and edge data</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap">
+              <span style="font-size: 1.5rem; line-height: 1;">🔐</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Google OAuth</div>
+              <div class="skill-category-label">Third-party authentication</div>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap">
+              <span class="custom-badge-icon">CF</span>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name">Cloudflare Tunnels</div>
+              <div class="skill-category-label">Secure public tunneling for local dev and webhooks</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         DEVELOPER TERMINAL
+         ========================================================================== -->
+    <section class="section-padding" id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Developer Terminal</h2>
+          <p class="section-subtitle">
+            Type commands or click quick action chips to inspect background or control the avatar.
+          </p>
+        </div>
+
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <div class="terminal-dot red"></div>
+              <div class="terminal-dot yellow"></div>
+              <div class="terminal-dot green"></div>
+            </div>
+            <div class="terminal-title">nidhi@portfolio: ~ (zsh)</div>
+            <div style="font-size: 0.75rem; color: #a89f91;">Interactive Shell</div>
+          </div>
+
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-line success">Welcome to Nidhi's Interactive Terminal v2.4.0</div>
+            <div class="terminal-line output">Type <span class="accent">help</span> to view available commands, or click
+              any chip below:</div>
+          </div>
+
+          <div class="terminal-input-row" style="padding: 0 28px 20px 28px;">
+            <span class="terminal-prompt">nidhi@portfolio:~$</span>
+            <input type="text" id="terminalInput" class="terminal-input"
+              placeholder="Type a command ('help', 'about', 'skills', 'track orbit')..." autocomplete="off"
+              spellcheck="false">
+          </div>
+
+          <div class="terminal-quick-cmds">
+            <span style="font-size: 0.75rem; color: #a89f91; margin-right: 6px;">Quick Actions:</span>
+            <button class="quick-cmd-btn" data-cmd="help">help</button>
+            <button class="quick-cmd-btn" data-cmd="about">about</button>
+            <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+            <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+            <button class="quick-cmd-btn" data-cmd="track orbit">track orbit</button>
+            <button class="quick-cmd-btn" data-cmd="track smart">track smart</button>
+            <button class="quick-cmd-btn" data-cmd="contact">contact</button>
+            <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section class="section-padding" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Let's Build Something Exceptional</h2>
+          <p class="section-subtitle">
+            Have an exciting project, full-time opportunity, or want to collaborate on creative engineering? Send me a
+            message!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="glass-card contact-info-card">
+            <div>
+              <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--color-espresso); margin-bottom: 12px;">Get In
+                Touch Directly</h3>
+              <p style="font-size: 1rem; line-height: 1.6; color: var(--color-espresso-subtle);">
+                I'm always open to discussing new opportunities, consulting on interactive web engineering, or
+                exchanging creative ideas.
+              </p>
+            </div>
+
+            <div class="contact-quick-pill" id="copyEmailBtn" title="Click to copy email address">
+              <span>📧 nidhi24dharme2006@gmail.com</span>
+              <span class="copy-label" style="font-weight: 800; color: var(--color-espresso);">Copy Email 📋</span>
+            </div>
+
+            <div>
+              <div
+                style="font-size: 0.85rem; font-weight: 700; color: var(--color-espresso-muted); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em;">
+                Connect on Socials
+              </div>
+              <div class="contact-social-links">
+                <a href="https://github.com/Nidhi2-4" target="_blank" rel="noopener noreferrer" class="social-btn"
+                  title="GitHub" aria-label="GitHub">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/nidhi-dharme-b65085344/" target="_blank" rel="noopener noreferrer"
+                  class="social-btn" title="LinkedIn" aria-label="LinkedIn">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/niiidhi._24?igsh=MW53c2U2ZHN6N2JjaA%3D%3D" target="_blank"
+                  rel="noopener noreferrer" class="social-btn" title="Instagram" aria-label="Instagram">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card contact-form-card">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Your Name *</label>
+                <input type="text" id="senderName" class="form-input" placeholder="e.g. Alex Vance" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Email Address *</label>
+                <input type="email" id="senderEmail" class="form-input" placeholder="alex@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">Your Message *</label>
+                <textarea id="senderMessage" class="form-textarea"
+                  placeholder="Tell me about your project, vision, or timeline..." required></textarea>
+              </div>
+
+              <button type="submit" class="pill-btn pill-btn-dark" style="width: 100%;">
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        © 2026 <strong>Nidhi Dharme </strong>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Circular Back to Top Button (Bottom Right) -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Scroll to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="scripts/projects-data.js?v=23"></script>
+  <script src="scripts/avatar-tracker.js?v=23"></script>
+  <script src="scripts/terminal.js?v=23"></script>
+  <script src="scripts/main.js?v=23"></script>
+</body>
+
+</html>

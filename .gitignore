@@ -1,0 +1,54 @@
+# ==============================================================================
+# Git Ignore Configuration
+# ==============================================================================
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Raw Media, Video Captures & Keyframes
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+assets/myvid_keyframes.mp4
+myvid_final.mp4
+
+# Extracted Animation Frames & Montages (Protects avatar/cursor frame assets)
+assets/frames/
+assets/frames/*
+assets/frames_montage.jpg
+assets/center_comparison.jpg
+
+# Optional: Avatar Cursor Tracker Script (Uncomment if you want to keep tracking logic private)
+# scripts/avatar-tracker.js
+
+# Dependencies & Build Artefacts
+node_modules/
+dist/
+build/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & IDE Configuration
+.env
+.env.local
+.env.*.local
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# AI / IDE Scratch Files
+.gemini/
+.agents/
