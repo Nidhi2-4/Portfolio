@@ -426,7 +426,7 @@ function initBackToTop() {
    6. Resume Download Handler (with graceful fallback)
    ========================================================================== */
 function initResumeDownload() {
-  const resumeLinks = document.querySelectorAll('a[download][href*="resume.pdf"]');
+  const resumeLinks = document.querySelectorAll('a[download][href*=".pdf"]');
   resumeLinks.forEach(link => {
     link.addEventListener('click', async (e) => {
       try {

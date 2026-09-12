@@ -23,10 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="terminal-line output">• <span class="accent">projects</span>       - List all featured projects & interactive links</div>
 <div class="terminal-line output">• <span class="accent">open &lt;name&gt;</span>     - Open modal details (e.g. <span class="success">open himsagar</span>, <span class="success">open kyro</span>)</div>
 <div class="terminal-line output">• <span class="accent">experience</span>     - View work history & software internships</div>
+<div class="terminal-line output">• <span class="accent">resume</span>         - Download or view Nidhi's latest resume PDF</div>
 <div class="terminal-line output">• <span class="accent">contact</span>        - Get direct email, LinkedIn & GitHub links</div>
 <div class="terminal-line output">• <span class="accent">date</span>           - Display current date and time</div>
 <div class="terminal-line output">• <span class="accent">clear</span>          - Clear the terminal console</div>
     `,
+
+    resume: () => {
+      const link = document.createElement('a');
+      link.href = 'assets/Resume-Nidhi-Updated.pdf';
+      link.download = 'Nidhi_Dharme_Resume.pdf';
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      return `<div class="terminal-line success">📄 Opening / downloading <strong>Resume-Nidhi-Updated.pdf</strong>...</div>
+<div class="terminal-line output">Direct link: <a href="assets/Resume-Nidhi-Updated.pdf" target="_blank" class="accent" style="text-decoration:underline;">Open Resume PDF ↗</a></div>`;
+    },
 
     about: () => `
 <div class="terminal-line success">🚀 Nidhi Dharme — Full-Stack Engineer & Technical Writer</div>
