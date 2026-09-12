@@ -10,7 +10,7 @@ class AvatarTracker {
     this.canvas = document.getElementById('avatarCanvas');
     if (!this.canvas) return;
 
-    this.ctx = this.canvas.getContext('2d', { alpha: false });
+    this.ctx = this.canvas.getContext('2d', { alpha: true });
     this.totalFrames = 240;
     this.frames = new Array(this.totalFrames);
     this.loadedCount = 0;
@@ -59,6 +59,10 @@ class AvatarTracker {
   setupCanvasResolution() {
     this.canvas.width = 1280;
     this.canvas.height = 720;
+    if (this.ctx) {
+      this.ctx.fillStyle = '#dfc9b5';
+      this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    }
   }
 
   preloadFrames() {

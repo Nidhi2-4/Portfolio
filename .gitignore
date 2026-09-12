@@ -20,9 +20,7 @@ Thumbs.db
 assets/myvid_keyframes.mp4
 myvid_final.mp4
 
-# Extracted Animation Frames & Montages (Protects avatar/cursor frame assets)
-assets/frames/
-assets/frames/*
+# Test & Debug Image Renders (Raw video captures remain private)
 assets/frames_montage.jpg
 assets/center_comparison.jpg
 
