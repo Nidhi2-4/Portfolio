@@ -35,8 +35,21 @@
     <div class="top-nav-inner">
       <!-- Left: Live Local Time + Social Links -->
       <div class="header-left-group">
-        <div class="brand-logo" id="liveClock">
-          1:01 AM
+        <div class="brand-logo" id="liveClock" title="Local Time">
+          <script>
+            (function() {
+              try {
+                var now = new Date();
+                var timeStr = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', hour12: true });
+                var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+                var el = document.getElementById('liveClock');
+                if (el) {
+                  el.textContent = timeStr;
+                  if (tz) el.setAttribute('title', 'Local Time (' + tz.replace(/_/g, ' ') + ')');
+                }
+              } catch(e) {}
+            })();
+          </script>
         </div>
         <div class="nav-social-links">
           <a href="https://www.linkedin.com/in/nidhi-dharme-b65085344/" target="_blank" rel="noopener noreferrer"
@@ -931,7 +944,7 @@
   <script src="scripts/projects-data.js?v=30"></script>
   <script src="scripts/avatar-tracker.js?v=30"></script>
   <script src="scripts/terminal.js?v=30"></script>
-  <script src="scripts/main.js?v=30"></script>
+  <script src="scripts/main.js?v=31"></script>
 </body>
 
 </html>

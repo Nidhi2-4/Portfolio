@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. Live Clock in Header Bar
+   1. Live Local Clock in Header Bar (Adapts to Visitor's Location & Timezone)
    ========================================================================== */
 function initLiveClock() {
   const clockEl = document.getElementById('liveClock');
@@ -25,12 +25,28 @@ function initLiveClock() {
 
   function updateClock() {
     const now = new Date();
-    let hours = now.getHours();
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // 12-hour format
-    clockEl.textContent = `${hours}:${minutes} ${ampm}`;
+    
+    // Format precisely to visitor's local system time in 12-hour format
+    const timeString = now.toLocaleTimeString([], {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
+    
+    // Detect visitor's local timezone (e.g. Asia/Kolkata, America/New_York, Europe/London)
+    let userTimeZone = '';
+    try {
+      userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    } catch (e) {
+      userTimeZone = '';
+    }
+
+    clockEl.textContent = timeString;
+    if (userTimeZone) {
+      clockEl.setAttribute('title', `Local Time (${userTimeZone.replace(/_/g, ' ')})`);
+    } else {
+      clockEl.setAttribute('title', 'Local Time');
+    }
   }
 
   updateClock();
