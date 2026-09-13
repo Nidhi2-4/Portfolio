@@ -13,12 +13,8 @@ class AvatarTracker {
     this.ctx = this.canvas.getContext('2d', { alpha: true });
     this.totalFrames = 240;
     this.frames = new Array(this.totalFrames);
-    this.loadedCount = 0;
-    this.isReady = false;
-
-    // DOM UI elements
-    this.loadingOverlay = document.getElementById('avatarLoadingOverlay');
-    this.progressText = document.getElementById('avatarProgressText');
+    this.baseFrame = 190;
+    this.isReady = true;
 
     // Pointer & Gaze Targets
     this.targetGazeX = 0;
@@ -42,7 +38,7 @@ class AvatarTracker {
     this.idleFrameCounter = 190.0;
 
     // Transition Crossfade
-    this.lastDrawnFrame = -1;
+    this.lastDrawnFrame = 190;
     this.crossfadeFrame = -1;
     this.crossfadeAlpha = 1.0;
 
@@ -52,6 +48,7 @@ class AvatarTracker {
   init() {
     this.setupCanvasResolution();
     this.bindEvents();
+    this.loadBaseFrame();
     this.preloadFrames();
     this.startRenderLoop();
   }
@@ -65,46 +62,30 @@ class AvatarTracker {
     }
   }
 
-  preloadFrames() {
-    const framePromises = [];
-
-    for (let i = 0; i < this.totalFrames; i++) {
-      const pad = String(i).padStart(3, '0');
-      const src = `assets/frames/frame_${pad}.webp`;
-
-      const p = new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => {
-          this.frames[i] = img;
-          this.loadedCount++;
-          this.updateProgress();
-          resolve();
-        };
-        img.onerror = () => {
-          this.loadedCount++;
-          this.updateProgress();
-          resolve();
-        };
-        img.src = src;
-      });
-
-      framePromises.push(p);
+  loadBaseFrame() {
+    const baseImg = new Image();
+    baseImg.onload = () => {
+      this.frames[this.baseFrame] = baseImg;
+      this.drawFrame(this.baseFrame);
+    };
+    baseImg.src = `assets/frames/frame_${String(this.baseFrame).padStart(3, '0')}.webp`;
+    if (baseImg.complete) {
+      this.frames[this.baseFrame] = baseImg;
+      this.drawFrame(this.baseFrame);
     }
-
-    Promise.all(framePromises).then(() => {
-      this.isReady = true;
-      if (this.loadingOverlay) {
-        this.loadingOverlay.classList.add('hidden');
-      }
-      this.currentBranch = 'idle';
-      this.drawFrame(190);
-    });
   }
 
-  updateProgress() {
-    const percent = Math.round((this.loadedCount / this.totalFrames) * 100);
-    if (this.progressText) {
-      this.progressText.textContent = `LOADING CHARACTER • ${percent}%`;
+  preloadFrames() {
+    // Asynchronously stream frames in background without blocking screen
+    for (let i = 0; i < this.totalFrames; i++) {
+      if (i === this.baseFrame) continue;
+      const pad = String(i).padStart(3, '0');
+      const src = `assets/frames/frame_${pad}.webp`;
+      const img = new Image();
+      img.onload = () => {
+        this.frames[i] = img;
+      };
+      img.src = src;
     }
   }
 
@@ -300,11 +281,14 @@ class AvatarTracker {
   }
 
   drawFrameWithCrossfade(frameIndex) {
-    const img = this.frames[frameIndex];
+    let img = this.frames[frameIndex];
+    if (!img || !img.complete) {
+      img = this.frames[this.lastDrawnFrame] || this.frames[this.baseFrame];
+    }
     if (!img || !img.complete) return;
 
     if (this.crossfadeAlpha > 0.05 && this.crossfadeFrame >= 0) {
-      const prevImg = this.frames[this.crossfadeFrame];
+      const prevImg = this.frames[this.crossfadeFrame] || this.frames[this.baseFrame];
       if (prevImg && prevImg.complete) {
         this.ctx.globalAlpha = 1.0;
         this.ctx.drawImage(prevImg, 0, 0, this.canvas.width, this.canvas.height);
@@ -321,7 +305,10 @@ class AvatarTracker {
   }
 
   drawFrame(frameIndex) {
-    const img = this.frames[frameIndex];
+    let img = this.frames[frameIndex];
+    if (!img || !img.complete) {
+      img = this.frames[this.lastDrawnFrame] || this.frames[this.baseFrame];
+    }
     if (img && img.complete) {
       this.ctx.globalAlpha = 1.0;
       this.ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
