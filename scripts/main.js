@@ -322,29 +322,36 @@ function initContactForm() {
     submitBtn.disabled = true;
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/nidhi24dharme2006@gmail.com', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
+          access_key: 'fa6c0404-49b0-4ca3-88a4-0aa1ed892d73',
           name: name,
           email: email,
           message: message,
-          _subject: `New Portfolio Message from ${name}`
+          subject: `✨ New Portfolio Inquiry from ${name}`,
+          from_name: `${name} (via Portfolio)`
         })
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         showToast('🚀 Message sent successfully! Thanks for reaching out, Nidhi will reply soon.');
         form.reset();
       } else {
+        const errorMsg = result.message || 'Error sending message';
+        console.error('Web3Forms Error:', errorMsg);
         // Fallback to mailto
         window.location.href = `mailto:nidhi24dharme2006@gmail.com?subject=Portfolio%20Inquiry%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')')}`;
         showToast('✉️ Opening email client to send message...');
       }
     } catch (err) {
+      console.error('Submission Error:', err);
       window.location.href = `mailto:nidhi24dharme2006@gmail.com?subject=Portfolio%20Inquiry%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')')}`;
       showToast('✉️ Opening email client to send message...');
     } finally {
